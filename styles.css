@@ -1,0 +1,100 @@
+@font-face {
+    font-family: digital;
+    src: url(./assets/fonts/digital-7.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:  sans-serif;
+    font-size: 20px;
+}
+
+.app{
+    background: #464749;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+}
+
+.calculator{
+    background: #1f1f1f;
+    width: 20em;
+    height: 32em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2em;
+}
+
+.display{
+    background: #464749;
+    width: 100%;
+    height: 5.5em;
+    padding: 0.5em;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    overflow: hidden;
+}
+
+.display .prev-input{
+    font-size: 1.4em;
+}
+
+.display .curr-input{
+    font-size: 2em;
+}
+
+ /*span created in JS*/
+.display span.operator{
+    color: #ff4800;
+    font-size: .9em;
+}
+
+.display span.brackets,
+.display span.percent{
+    color: #12aee2;
+    font-size: .9em;
+}
+/*JS*/
+
+
+.keys{
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+}
+
+.keys .key{
+    background: #222;
+    width: 3em;
+    height: 3em;
+    border: 3px solid #333333;
+    border-radius: .1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keys .key:hover{
+    cursor: pointer;
+    background: #444;
+}
+
+.keys .key span {
+    color: #f0f0f0;
+    font-size: 1.8em;
+}
+
+.keys .key.action span {color: #12aee2;}
+
+.keys .key.operator span{color: #ff4800;}
